@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://luoxu1314.github.io/sitemap-index.xml
