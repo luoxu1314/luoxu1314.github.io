@@ -1,0 +1,2 @@
+ed8a61c0dc006b51bb85db4c3ef2032fa9f019439bcd37d441b260548475d405  q5-accessibility-bridge.apk
+cad85c57da4e426739dc390234eff86c78f0291cd817a2338e2deaabf156b7ea  q5-adb-restore.apk

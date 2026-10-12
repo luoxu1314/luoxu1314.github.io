@@ -1,0 +1,212 @@
+<!DOCTYPE html><html lang="zh-CN" data-astro-cid-tldeq5d5><head><!-- Global Metadata --><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="sitemap" href="/sitemap-index.xml"><link rel="alternate" type="application/rss+xml" title="落絮的博客" href="https://luoxu1314.github.io/rss.xml"><meta name="generator" content="Astro v7.3.8"><!-- Canonical URL --><link rel="canonical" href="https://luoxu1314.github.io/blog/xiaoming-q5-pro-followup/"><!-- Primary Meta Tags --><title>小明 Q5 Pro 折腾后续：换桌面、补设置，以及让 ADB 开机自动恢复 | 落絮的博客</title><meta name="description" content="ADB 连上以后接着做：Emotn UI 加 Launcher Hijack 接管 Home 键，补一套 TV 设置和开发者选项，顺便记一下新版设置和 root 试到了哪一步。"><!-- Open Graph --><meta property="og:type" content="website"><meta property="og:url" content="https://luoxu1314.github.io/blog/xiaoming-q5-pro-followup/"><meta property="og:title" content="小明 Q5 Pro 折腾后续：换桌面、补设置，以及让 ADB 开机自动恢复"><meta property="og:description" content="ADB 连上以后接着做：Emotn UI 加 Launcher Hijack 接管 Home 键，补一套 TV 设置和开发者选项，顺便记一下新版设置和 root 试到了哪一步。"><style>:root{--content-width:720px;--bg:#fbfaf7;--text:#1f2328;--text-soft:#424a53;--muted:#6e7781;--border:#e3e0d8;--accent:#2f6f5e;--code-bg:#f2f0ea;--note-bg:#eef5f2;color-scheme:light}@media (prefers-color-scheme:dark){:root{--bg:#17191c;--text:#e6e6e3;--text-soft:#bfc3c8;--muted:#8b929a;--border:#2d3136;--accent:#7cc4ad;--code-bg:#202328;--note-bg:#1d2a26;color-scheme:dark}}*,:before,:after{box-sizing:border-box}html{-webkit-text-size-adjust:100%}body{background:var(--bg);color:var(--text);overflow-wrap:break-word;margin:0;font-family:-apple-system,BlinkMacSystemFont,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Noto Sans CJK SC,Segoe UI,sans-serif;font-size:17px;line-height:1.8}main{max-width:var(--content-width);margin:0 auto;padding:1rem}a{color:var(--accent);text-underline-offset:.2em}.prose h1,.prose h2,.prose h3{line-height:1.4}.prose h2{border-bottom:1px solid var(--border);margin:2.5rem 0 1rem;padding-bottom:.3rem;font-size:1.4rem}.prose h3{margin:2rem 0 .75rem;font-size:1.15rem}.prose p,.prose ul,.prose ol{margin:0 0 1.1rem}.prose li+li{margin-top:.25rem}.prose img,.prose video{border:1px solid var(--border);border-radius:8px;max-width:100%;height:auto;margin:1.25rem auto;display:block}.prose blockquote{border-left:3px solid var(--accent);background:var(--note-bg);color:var(--text-soft);border-radius:0 6px 6px 0;margin:1.25rem 0;padding:.75rem 1rem}.prose blockquote p:last-child{margin-bottom:0}.prose hr{border:none;border-top:1px solid var(--border);margin:2rem 0}code{font-family:SF Mono,Menlo,Consolas,Liberation Mono,monospace;font-size:.88em}:not(pre)>code{background:var(--code-bg);border-radius:4px;padding:.15em .35em}pre{border:1px solid var(--border);border-radius:8px;margin:0 0 1.25rem;padding:.9rem 1rem;line-height:1.6;overflow-x:auto}pre>code{font-size:.85rem}.astro-code,.astro-code span{background-color:var(--code-bg)!important}@media (prefers-color-scheme:dark){.astro-code,.astro-code span{color:var(--shiki-dark)!important;font-style:var(--shiki-dark-font-style)!important;font-weight:var(--shiki-dark-font-weight)!important}}.prose table{border-collapse:collapse;width:100%;margin:0 0 1.25rem;font-size:.92rem;line-height:1.6;display:block;overflow-x:auto}.prose th,.prose td{border:1px solid var(--border);text-align:left;vertical-align:top;padding:.5rem .75rem}.prose th{background:var(--code-bg);white-space:nowrap}.sr-only{clip:rect(1px, 1px, 1px, 1px);white-space:nowrap;width:1px;height:1px;overflow:hidden;position:absolute!important}@media (width<=600px){body{font-size:16px}}footer[data-astro-cid-jo6i4kqk]{max-width:var(--content-width);border-top:1px solid var(--border);color:var(--muted);margin:4rem auto 0;padding:2rem 1rem 3rem;font-size:.875rem}footer[data-astro-cid-jo6i4kqk] a[data-astro-cid-jo6i4kqk]{color:var(--muted)}.sep[data-astro-cid-jo6i4kqk]{margin:0 .4em}header[data-astro-cid-nen7h5rs]{border-bottom:1px solid var(--border)}nav[data-astro-cid-nen7h5rs]{max-width:var(--content-width);justify-content:space-between;align-items:center;gap:1rem;margin:0 auto;padding:1.1rem 1rem;display:flex}.site-title[data-astro-cid-nen7h5rs]{color:var(--text);font-size:1.1rem;font-weight:700;text-decoration:none}.links[data-astro-cid-nen7h5rs]{gap:1.25rem;display:flex}.links[data-astro-cid-nen7h5rs] a[data-astro-cid-nen7h5rs]{color:var(--muted);text-decoration:none}.links[data-astro-cid-nen7h5rs] a[data-astro-cid-nen7h5rs]:hover,.links[data-astro-cid-nen7h5rs] a[data-astro-cid-nen7h5rs].active{color:var(--text)}
+.post-header[data-astro-cid-tldeq5d5]{margin:1rem 0 2.5rem}.post-header[data-astro-cid-tldeq5d5] h1[data-astro-cid-tldeq5d5]{margin:0 0 .6rem;font-size:1.85rem;line-height:1.35}.meta[data-astro-cid-tldeq5d5]{color:var(--muted);margin:0;font-size:.9rem}.tag[data-astro-cid-tldeq5d5]{margin-left:.75em}
+</style></head><body data-astro-cid-tldeq5d5><header data-astro-cid-nen7h5rs><nav data-astro-cid-nen7h5rs><a class="site-title" href="/" data-astro-cid-nen7h5rs>落絮的博客</a><div class="links" data-astro-cid-nen7h5rs><a href="/" data-astro-cid-nen7h5rs>文章</a><a href="/about/" data-astro-cid-nen7h5rs>关于</a></div></nav></header><main data-astro-cid-tldeq5d5><article data-astro-cid-tldeq5d5><header class="post-header" data-astro-cid-tldeq5d5><h1 data-astro-cid-tldeq5d5>小明 Q5 Pro 折腾后续：换桌面、补设置，以及让 ADB 开机自动恢复</h1><p class="meta" data-astro-cid-tldeq5d5><time datetime="2026-10-12T04:00:00.000Z">2026-10-12</time><span class="tag" data-astro-cid-tldeq5d5>#投影仪</span><span class="tag" data-astro-cid-tldeq5d5>#Android</span><span class="tag" data-astro-cid-tldeq5d5>#ADB</span></p></header><div class="prose" data-astro-cid-tldeq5d5><p><a href="/blog/xiaoming-q5-pro-adb/">前一篇</a>已经介绍了小明 Q5 Pro 怎么打开 ADB。这篇接着往下做：连接上电脑以后，怎么换一个顺手的桌面，怎么让 Home 键回到新桌面，以及怎么补上原厂菜单里不容易找到的设置入口。</p>
+<p>我用的是 <strong>小明 Q5 Pro（XMM3101），极光 TV 版，Android 13，固件 2.0.7.1070</strong>。以下是这台机器截至 2026 年 10 月 12 日的实测记录，其他型号和固件需要另外验证。</p>
+<p>之前参考过杨葛格的<a href="https://zhuanlan.zhihu.com/p/19270170689">《将 FengOS 系统默认桌面更换为第三方桌面启动器》</a>。原文基于 FengOS 的环境，并明确排除了 Q5 Pro 等极光 TV 机型。我这里补充的是 Q5 Pro 上的具体入口、遇到的问题和实际结果。</p>
+<h2 id="目前实现了什么">目前实现了什么？</h2>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>目前的结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>电脑通过网络 ADB 连接投影仪</td>
+<td>已实现，可以安装 APK、打开指定设置页面、读取状态</td>
+</tr>
+<tr>
+<td>关机再开后自动恢复 ADB</td>
+<td>自制工具已通过一次完整关机再开测试；刚开机可能暂时连不上，拔电重启未单独测试</td>
+</tr>
+<tr>
+<td>使用第三方桌面</td>
+<td>Emotn UI 已安装并正常打开；Projectivy 也试过</td>
+</tr>
+<tr>
+<td>按 Home 回 Emotn UI</td>
+<td>最终采用 Launcher Hijack 接管，ADB 按键测试通过；重启后的保持情况未完成验证</td>
+</tr>
+<tr>
+<td>双击 Home 打开多任务</td>
+<td>最终组合下，ADB 连续 Home 可打开原厂多任务；不是必须靠 Button Mapper 才能实现</td>
+</tr>
+<tr>
+<td>打开无障碍设置</td>
+<td>已找到原厂入口，并做了一个跳转工具；Projectivy 原来的跳转问题已实测解决</td>
+</tr>
+<tr>
+<td>补充 TV 设置界面</td>
+<td>旧版移植能打开多个页面，系统提示音开关也验证过能生效</td>
+</tr>
+<tr>
+<td>进入开发者选项</td>
+<td>授权后可直接用 ADB 打开，检查时开发者模式已开启</td>
+</tr>
+<tr>
+<td>完整的新版原生侧栏设置</td>
+<td>只做到了部分界面运行，多处仍闪退，暂不作为日常方案</td>
+</tr>
+<tr>
+<td>Bootloader 解锁、完整 root、刷机</td>
+<td>没有完成，不能把前面这些功能叫作“完全解锁”</td>
+</tr>
+</tbody>
+</table>
+<p>这次日常使用的重点是 <strong>Emotn UI＋Launcher Hijack＋原厂无障碍入口</strong>。补充设置和 ADB 自动恢复按需安装，不用把所有工具都装一遍。</p>
+<h2 id="准备文件先确认-adb-能连接">准备文件，先确认 ADB 能连接</h2>
+<p>开启 ADB 的菜单操作沿用前一篇，这里不再重复。电脑和投影仪在同一个局域网，连接后用 <code>adb devices</code> 确认设备状态是 <code>device</code>。</p>
+<pre class="astro-code astro-code-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="sh"><code><span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">adb</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> connect</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> 投影仪IP:5555</span></span>
+<span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">adb</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> devices</span></span></code></pre>
+<p>把 <code>投影仪IP</code> 换成你设备的实际地址。后面的简写命令假设电脑只连接这一台 Android 设备；如果还连接了手机或模拟器，改成 <code>adb -s 投影仪IP:5555 shell ...</code> 或 <code>adb -s 投影仪IP:5555 install ...</code>。</p>
+<p>电脑没有 ADB 的话，可从 <a href="https://developer.android.com/tools/releases/platform-tools">Android 官方 Platform Tools 页面</a>获取。Windows PowerShell 在工具所在目录运行时，可能需要把 <code>adb</code> 写成 <code>./adb.exe</code>；macOS/Linux 可使用 <code>./adb</code>。命令行使用方式见 <a href="https://developer.android.com/tools/adb">Android 官方 ADB 文档</a>。</p>
+<p>我这次使用的文件如下。版本号记录的是实测版本，不代表必须追最新版本。</p>
+<table>
+<thead>
+<tr>
+<th>文件或工具</th>
+<th>实测版本／用途</th>
+<th>获取方式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Emotn UI</td>
+<td>1.1.0.2，桌面</td>
+<td><a href="https://app.emotn.com/ui/">官网</a></td>
+</tr>
+<tr>
+<td>Launcher Hijack</td>
+<td>4.0.3，接管 Home 后打开指定桌面</td>
+<td><a href="https://github.com/BaronKiko/LauncherHijack/releases/tag/403">作者发布页</a></td>
+</tr>
+<tr>
+<td>TvSettingsOnFire</td>
+<td>0.1，旧版 TV 设置移植</td>
+<td><a href="https://github.com/ewlsh/TvSettingsOnFire/releases/tag/v0.1">作者发布页</a></td>
+</tr>
+<tr>
+<td>无障碍设置入口</td>
+<td>本次自制，只跳转至 Q5 的原厂页面</td>
+<td><a href="/downloads/q5/q5-accessibility-bridge.apk">q5-accessibility-bridge.apk</a></td>
+</tr>
+<tr>
+<td>ADB 开机恢复</td>
+<td>本次自制，开机后恢复 ADB 开关</td>
+<td><a href="/downloads/q5/q5-adb-restore.apk">q5-adb-restore.apk</a></td>
+</tr>
+</tbody>
+</table>
+<p>后两个是针对本机做的小工具，不是厂商官方软件。源码和校验值打包在<a href="/downloads/q5/q5-tools-with-source.zip">工具合集包</a>里，也可以单独看 <a href="/downloads/q5/SHA256SUMS.txt">SHA256SUMS.txt</a>；其中无障碍入口工具不申请权限，ADB 恢复工具需要单独授权。</p>
+<h2 id="先解决重启以后-adb-又关了">先解决“重启以后 ADB 又关了”</h2>
+<p>这台 Q5 Pro 在工程菜单打开 ADB 后，关机再开可能又连不上。排查厂商服务代码发现，它在启动时会按一个默认值重新设置 ADB，而本机这个默认值是关闭。</p>
+<p>因此，单次打开工程菜单里的开关，不等于每次开机都会保持。</p>
+<p>我这次做了一个“ADB 开机恢复”小工具。它收到开机完成广播后，把 ADB 开关恢复为开启，并安排约 30、90、180 秒后的几次复查。实际执行时间可能受系统调度影响。</p>
+<p>安装并授权：</p>
+<pre class="astro-code astro-code-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="sh"><code><span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">adb</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> install</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> q5-adb-restore.apk</span></span>
+<span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">adb</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> shell</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> pm</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> grant</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> local.q5.adbrestore</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> android.permission.WRITE_SECURE_SETTINGS</span></span>
+<span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">adb</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> shell</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> am</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> start</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> -n</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> local.q5.adbrestore/.MainActivity</span></span></code></pre>
+<p>界面打开后，点击 <strong>“启用开机恢复并立即恢复 ADB”</strong>。仅安装 APK 不会默认启用自动恢复。</p>
+<p>这次完整关机再开后，开机早期连接曾被拒绝，随后自动恢复；日志记录了开机广播将 ADB 从 <code>0</code> 改为 <code>1</code>，没有再手动进入工程菜单开开关。<strong>一次关机再开已通过，但还没有单独做拔电重启或长期稳定性测试。</strong></p>
+<p>如果刚进入桌面还连不上，先等系统启动完成，再检查投影仪 IP 是否变化。工具只恢复开关，不会替你固定 IP，也不会修改 ADB 端口。</p>
+<p>不想自动恢复时，在工具里点“停用自动恢复”，或卸载它。停用和卸载不会立即关闭当前已开启的 ADB，需要关闭时仍可回工程菜单操作。</p>
+<p>本机调试日志曾出现不要求连接认证的记录，所以持续开启网络 ADB 时，只在自己可信的局域网使用，不要把 5555 端口映射到公网。</p>
+<h2 id="无障碍入口打不开先找到原厂的那个页面">无障碍入口打不开，先找到原厂的那个页面</h2>
+<p>安装 Projectivy 后，我遇到过一个问题：点“显示无障碍服务设置”无法正常进入。后来查到，这台机器的标准 Android 无障碍跳转入口没有正确指向原厂页面，但 CVTE 自己的入口还在。</p>
+<p>电脑上执行这条命令即可打开：</p>
+<pre class="astro-code astro-code-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="sh"><code><span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">adb</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> shell</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> am</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> start</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> -a</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> com.cvte.intent.action.ACCESSIBILITY_SETTING</span></span></code></pre>
+<p>这一步打开的是 Q5 自带的设置，不需要先安装新版 Google Settings。</p>
+<p>如果希望以后直接用遥控器打开，或者解决 Projectivy 的跳转问题，可以安装“无障碍设置入口”：</p>
+<pre class="astro-code astro-code-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="sh"><code><span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">adb</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> install</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> q5-accessibility-bridge.apk</span></span></code></pre>
+<p>它只做页面跳转，没有后台服务，也不会自动帮你开启任何无障碍服务。装好后，桌面会出现同名入口；Projectivy 原来的“显示无障碍服务设置”也已由我实际点进去验证过。</p>
+<p><img alt="Projectivy 中的无障碍设置入口位置" loading="lazy" decoding="async" width="1920" height="1080" src="/_astro/01-projectivy-entry.CrOlcLaJ_12do5u.webp"></p>
+<p>图中展示的是 Projectivy 的入口位置；画面中的其他开关不作为本教程要求，不需要照着全部打开。</p>
+<h2 id="安装-emotn-ui让-home-键回到新桌面">安装 Emotn UI，让 Home 键回到新桌面</h2>
+<p>先下载 Emotn UI 和 Launcher Hijack。为了方便输入，下面假设把两个 APK 分别重命名为 <code>emotn-ui.apk</code> 和 <code>launcher-hijack.apk</code>，并在文件所在目录运行命令：</p>
+<pre class="astro-code astro-code-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="sh"><code><span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">adb</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> install</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> emotn-ui.apk</span></span>
+<span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">adb</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> install</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> launcher-hijack.apk</span></span></code></pre>
+<p>装好后，先手动打开一次 Emotn UI，确认它能正常进入桌面。接着配置 Launcher Hijack：</p>
+<ol>
+<li>用上一节的命令或“无障碍设置入口”，打开原厂无障碍页面。</li>
+<li>找到 Launcher Hijack 对应服务，可能显示为 <strong>“To detect home button press”</strong>，进入后启用。</li>
+<li>打开 Launcher Hijack，在列表里选择 <strong>Emotn UI</strong>，确认选择。</li>
+<li>如果看不到 Emotn UI，可在右上角菜单取消 <code>Launchers Only</code> 筛选，再检查列表。</li>
+<li>打开另一个应用，再按 Home，验证能否回到 Emotn UI。</li>
+</ol>
+<p>Launcher Hijack 用无障碍服务检测 Home 动作。这里只开启它需要的服务，不需要把列表里所有服务都开启。</p>
+<p><img alt="Launcher Hijack 中可选择 Emotn UI" loading="lazy" decoding="async" width="1920" height="1080" src="/_astro/02-launcher-hijack.Bm-N3xzm_Z1XuGGn.webp"></p>
+<p><strong>我最后保留的桌面配置：Launcher Hijack 指向 Emotn UI，停用 Button Mapper 和 Projectivy 的无障碍接管。</strong> 原来已有且与桌面无关的服务可以保留，不要用一条命令覆盖整个无障碍服务列表。</p>
+<p>之前试过让 Button Mapper 单独处理 Home，结果又回到了腾讯桌面；恢复 Launcher Hijack 后，ADB 模拟 Home 能回到 Emotn UI。因此这篇先写已经验证过的这一套。</p>
+<p>这里实现的是 Home 操作后进入第三方桌面。原厂桌面还在，没有被卸载，系统的 HOME 解析也仍可能指向腾讯桌面。<strong>最终组合的重启后效果尚未完成验证，所以暂时不称为“永久替换默认桌面”。</strong></p>
+<h2 id="双击-home-的多任务还在吗">双击 Home 的多任务还在吗？</h2>
+<p>在最终的 Launcher Hijack 配置下，ADB 连续发送两个 Home，仍然能打开原厂多任务界面，显示应用卡片和“一键清除”。当时 Button Mapper 已经停用，所以不能把这个结果归功于 Button Mapper 的双击映射。</p>
+<p><img alt="Launcher Hijack 配置下仍可打开的原厂多任务" loading="lazy" decoding="async" width="1920" height="1080" src="/_astro/03-multitasking.CaVWYcbW_1KeQuC.webp"></p>
+<p>截图里能看到 Button Mapper 的卡片，只表示它安装过、打开过，不代表拍摄时服务仍在工作。</p>
+<p>实体遥控器的双击在前面的测试中成功过；最终组合下保留了 ADB 按键验证记录，遥控器手感和重启后状态仍应在自己的机器上再试一次。不能据此保证所有固件都保留双击功能。</p>
+<p>如果遇到 Home 回腾讯，先检查 Launcher Hijack 的目标是否还是 Emotn UI、无障碍服务是否仍启用，再检查有没有其他桌面接管工具同时工作。</p>
+<h2 id="补上-tv-设置和开发者选项">补上 TV 设置和开发者选项</h2>
+<p>如果还想要 Android TV 风格的设置页面，我这里试了 <a href="https://github.com/ewlsh/TvSettingsOnFire">TvSettingsOnFire</a>。它是旧版移植，原本面向 Fire TV；在 Q5 Pro 上只能算补充设置，不是整套 Android 13 原生系统设置。</p>
+<p>下载发布页的 <code>app-release.apk</code> 后，我把它重命名为 <code>tvsettings-on-fire-v0.1.apk</code>，然后安装、授权：</p>
+<pre class="astro-code astro-code-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="sh"><code><span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">adb</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> install</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> tvsettings-on-fire-v0.1.apk</span></span>
+<span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">adb</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> shell</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> pm</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> grant</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> com.rockon999.android.tv.settings</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> android.permission.WRITE_SECURE_SETTINGS</span></span>
+<span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">adb</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> shell</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> pm</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> grant</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> com.rockon999.android.tv.settings</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> android.permission.DUMP</span></span>
+<span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">adb</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> shell</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> am</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> start</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> -n</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> com.rockon999.android.tv.settings/.MainSettings</span></span></code></pre>
+<p>两项授权分别用于修改受保护的系统设置、读取系统诊断信息；它们不会赋予完整系统权限，也不会让所有不兼容页面自动变好。包名只对应这个旧版移植包。权限含义可查 <a href="https://developer.android.com/reference/android/Manifest.permission">Android 官方权限文档</a>。</p>
+<p>这版我实际测到的结果是：</p>
+<table>
+<thead>
+<tr>
+<th>页面</th>
+<th>实测情况</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>声音</td>
+<td>能打开；关闭系统提示音后确实生效，测试后已恢复</td>
+</tr>
+<tr>
+<td>显示、日期时间、输入法</td>
+<td>能打开；没有逐项验证修改效果</td>
+</tr>
+<tr>
+<td>无障碍、开发者选项</td>
+<td>能打开；没有逐项验证全部功能</td>
+</tr>
+<tr>
+<td>语言</td>
+<td>会因旧接口不兼容而闪退</td>
+</tr>
+<tr>
+<td>应用管理</td>
+<td>没有正常打开</td>
+</tr>
+</tbody>
+</table>
+<p>我曾在“关于”里连续点版本号，看到“还差一次”的提示后闪退。后来的处理流程是 <strong>给移植版授权，然后通过 ADB 直接打开开发者选项</strong>：</p>
+<pre class="astro-code astro-code-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="sh"><code><span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">adb</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> shell</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> am</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> start</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> -n</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> com.rockon999.android.tv.settings/.system.DeveloperOptionsActivity</span></span></code></pre>
+<p>查看开发者模式开关可以用：</p>
+<pre class="astro-code astro-code-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="sh"><code><span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">adb</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> shell</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> settings</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> get</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> global</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> development_settings_enabled</span></span></code></pre>
+<p>我这台检查时返回 <code>1</code>，表示已经开启。打开页面的命令本身不等于设置这个开关；也没有证据证明当时“连点版本号闪退”本身被修好了，只是后面可以直接进入页面，不必反复卡在那一步。</p>
+<p>安装这个移植版后，部分应用的通用“系统设置”按钮可能会打开它。需要原厂设置时，可以直接执行：</p>
+<pre class="astro-code astro-code-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="sh"><code><span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">adb</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> shell</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> am</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> start</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> -n</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> com.cvte.settings/.Settings</span></span></code></pre>
+<h2 id="新版侧栏设置和-root试到了哪里">新版侧栏设置和 root，试到了哪里？</h2>
+<p>后面还试过从 Google Android TV 13 镜像提取 Settings。原包直接安装遇到签名和系统共享身份冲突，经过应用层兼容修改后，右侧栏首页、设备偏好设置、日期时间和键盘页面能显示，但应用、语言、显示声音和无障碍等页面仍有闪退。</p>
+<p>所以我最终还是切回了旧版。新版侧栏确实跑出来了，可用性却没达到日常使用要求，这篇不把测试包当作推荐方案。</p>
+<p>root 也需要分开说：本机的 <code>su 0</code> 能返回 UID 0，但仍受 SELinux 和只读文件系统等限制。本次没有建立可用的系统目录覆盖方案，Bootloader 锁状态也没有确认。<strong>换桌面、补设置入口和恢复 ADB 这几项不需要以完成 root 解锁为前提；它们也不能证明机器已经完整解锁。</strong></p>
+<h2 id="不想用了怎么恢复">不想用了，怎么恢复？</h2>
+<p>按实际装过的工具逐个处理即可，不需要重置投影仪：</p>
+<ul>
+<li>想恢复原来的 Home 行为：先在原厂无障碍页面关闭 Launcher Hijack 服务，或卸载 Launcher Hijack。验证 Home 已恢复后，再决定是否删除 Emotn UI。</li>
+<li>不需要旧版 TV 设置：卸载 <code>com.rockon999.android.tv.settings</code>。原 CVTE 设置是另外的包。</li>
+<li>不需要无障碍跳转工具：卸载 <code>local.q5.accessibilitybridge</code>；卸载不会替你关闭之前启用的服务。</li>
+<li>不需要开机恢复 ADB：在工具里停用，或卸载 <code>local.q5.adbrestore</code>。如果还要立即关闭 ADB，再去工程菜单关掉开关。</li>
+</ul>
+<p>对应的卸载命令放在这里，<strong>按需选一条执行，不是让你配置完全部运行一遍</strong>：</p>
+<pre class="astro-code astro-code-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="sh"><code><span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">adb</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> uninstall</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> com.baronkiko.launcherhijack</span></span>
+<span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">adb</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> uninstall</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> com.rockon999.android.tv.settings</span></span>
+<span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">adb</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> uninstall</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> local.q5.accessibilitybridge</span></span>
+<span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">adb</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> uninstall</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> local.q5.adbrestore</span></span></code></pre>
+<p>目前我会保留 Emotn UI＋Launcher Hijack 的桌面组合，以及已经验证过的 ADB 恢复工具。旧版 TV 设置按需要用；新版侧栏继续留在试验阶段。如果同型号用户试过其他固件，欢迎到 <a href="https://github.com/luoxu1314/luoxu1314.github.io/issues">GitHub Issues</a> 补充固件版本、关机再开后的 Home 表现和双击多任务情况。</p>
+</div></article></main><footer data-astro-cid-jo6i4kqk><span data-astro-cid-jo6i4kqk>&copy; 2026 落絮</span><span class="sep" data-astro-cid-jo6i4kqk>·</span><a href="https://github.com/luoxu1314" target="_blank" rel="noopener" data-astro-cid-jo6i4kqk>GitHub</a><span class="sep" data-astro-cid-jo6i4kqk>·</span><a href="/rss.xml" data-astro-cid-jo6i4kqk>RSS</a></footer></body></html>

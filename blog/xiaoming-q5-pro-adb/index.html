@@ -1,0 +1,194 @@
+<!DOCTYPE html><html lang="zh-CN" data-astro-cid-tldeq5d5><head><!-- Global Metadata --><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="sitemap" href="/sitemap-index.xml"><link rel="alternate" type="application/rss+xml" title="落絮的博客" href="https://luoxu1314.github.io/rss.xml"><meta name="generator" content="Astro v7.3.8"><!-- Canonical URL --><link rel="canonical" href="https://luoxu1314.github.io/blog/xiaoming-q5-pro-adb/"><!-- Primary Meta Tags --><title>小明 Q5 Pro 投影仪进阶指南：开启 ADB、开机自启、无障碍权限 | 落絮的博客</title><meta name="description" content="极光 TV 版 Q5 Pro 的 ADB 藏在工程菜单里，重启还会被关掉；无障碍设置也点不进去。这篇把这几步一次讲清。"><!-- Open Graph --><meta property="og:type" content="website"><meta property="og:url" content="https://luoxu1314.github.io/blog/xiaoming-q5-pro-adb/"><meta property="og:title" content="小明 Q5 Pro 投影仪进阶指南：开启 ADB、开机自启、无障碍权限"><meta property="og:description" content="极光 TV 版 Q5 Pro 的 ADB 藏在工程菜单里，重启还会被关掉；无障碍设置也点不进去。这篇把这几步一次讲清。"><style>:root{--content-width:720px;--bg:#fbfaf7;--text:#1f2328;--text-soft:#424a53;--muted:#6e7781;--border:#e3e0d8;--accent:#2f6f5e;--code-bg:#f2f0ea;--note-bg:#eef5f2;color-scheme:light}@media (prefers-color-scheme:dark){:root{--bg:#17191c;--text:#e6e6e3;--text-soft:#bfc3c8;--muted:#8b929a;--border:#2d3136;--accent:#7cc4ad;--code-bg:#202328;--note-bg:#1d2a26;color-scheme:dark}}*,:before,:after{box-sizing:border-box}html{-webkit-text-size-adjust:100%}body{background:var(--bg);color:var(--text);overflow-wrap:break-word;margin:0;font-family:-apple-system,BlinkMacSystemFont,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Noto Sans CJK SC,Segoe UI,sans-serif;font-size:17px;line-height:1.8}main{max-width:var(--content-width);margin:0 auto;padding:1rem}a{color:var(--accent);text-underline-offset:.2em}.prose h1,.prose h2,.prose h3{line-height:1.4}.prose h2{border-bottom:1px solid var(--border);margin:2.5rem 0 1rem;padding-bottom:.3rem;font-size:1.4rem}.prose h3{margin:2rem 0 .75rem;font-size:1.15rem}.prose p,.prose ul,.prose ol{margin:0 0 1.1rem}.prose li+li{margin-top:.25rem}.prose img,.prose video{border:1px solid var(--border);border-radius:8px;max-width:100%;height:auto;margin:1.25rem auto;display:block}.prose blockquote{border-left:3px solid var(--accent);background:var(--note-bg);color:var(--text-soft);border-radius:0 6px 6px 0;margin:1.25rem 0;padding:.75rem 1rem}.prose blockquote p:last-child{margin-bottom:0}.prose hr{border:none;border-top:1px solid var(--border);margin:2rem 0}code{font-family:SF Mono,Menlo,Consolas,Liberation Mono,monospace;font-size:.88em}:not(pre)>code{background:var(--code-bg);border-radius:4px;padding:.15em .35em}pre{border:1px solid var(--border);border-radius:8px;margin:0 0 1.25rem;padding:.9rem 1rem;line-height:1.6;overflow-x:auto}pre>code{font-size:.85rem}.astro-code,.astro-code span{background-color:var(--code-bg)!important}@media (prefers-color-scheme:dark){.astro-code,.astro-code span{color:var(--shiki-dark)!important;font-style:var(--shiki-dark-font-style)!important;font-weight:var(--shiki-dark-font-weight)!important}}.prose table{border-collapse:collapse;width:100%;margin:0 0 1.25rem;font-size:.92rem;line-height:1.6;display:block;overflow-x:auto}.prose th,.prose td{border:1px solid var(--border);text-align:left;vertical-align:top;padding:.5rem .75rem}.prose th{background:var(--code-bg);white-space:nowrap}.sr-only{clip:rect(1px, 1px, 1px, 1px);white-space:nowrap;width:1px;height:1px;overflow:hidden;position:absolute!important}@media (width<=600px){body{font-size:16px}}footer[data-astro-cid-jo6i4kqk]{max-width:var(--content-width);border-top:1px solid var(--border);color:var(--muted);margin:4rem auto 0;padding:2rem 1rem 3rem;font-size:.875rem}footer[data-astro-cid-jo6i4kqk] a[data-astro-cid-jo6i4kqk]{color:var(--muted)}.sep[data-astro-cid-jo6i4kqk]{margin:0 .4em}header[data-astro-cid-nen7h5rs]{border-bottom:1px solid var(--border)}nav[data-astro-cid-nen7h5rs]{max-width:var(--content-width);justify-content:space-between;align-items:center;gap:1rem;margin:0 auto;padding:1.1rem 1rem;display:flex}.site-title[data-astro-cid-nen7h5rs]{color:var(--text);font-size:1.1rem;font-weight:700;text-decoration:none}.links[data-astro-cid-nen7h5rs]{gap:1.25rem;display:flex}.links[data-astro-cid-nen7h5rs] a[data-astro-cid-nen7h5rs]{color:var(--muted);text-decoration:none}.links[data-astro-cid-nen7h5rs] a[data-astro-cid-nen7h5rs]:hover,.links[data-astro-cid-nen7h5rs] a[data-astro-cid-nen7h5rs].active{color:var(--text)}
+.post-header[data-astro-cid-tldeq5d5]{margin:1rem 0 2.5rem}.post-header[data-astro-cid-tldeq5d5] h1[data-astro-cid-tldeq5d5]{margin:0 0 .6rem;font-size:1.85rem;line-height:1.35}.meta[data-astro-cid-tldeq5d5]{color:var(--muted);margin:0;font-size:.9rem}.tag[data-astro-cid-tldeq5d5]{margin-left:.75em}
+</style></head><body data-astro-cid-tldeq5d5><header data-astro-cid-nen7h5rs><nav data-astro-cid-nen7h5rs><a class="site-title" href="/" data-astro-cid-nen7h5rs>落絮的博客</a><div class="links" data-astro-cid-nen7h5rs><a href="/" data-astro-cid-nen7h5rs>文章</a><a href="/about/" data-astro-cid-nen7h5rs>关于</a></div></nav></header><main data-astro-cid-tldeq5d5><article data-astro-cid-tldeq5d5><header class="post-header" data-astro-cid-tldeq5d5><h1 data-astro-cid-tldeq5d5>小明 Q5 Pro 投影仪进阶指南：开启 ADB、开机自启、无障碍权限</h1><p class="meta" data-astro-cid-tldeq5d5><time datetime="2026-10-12T02:00:00.000Z">2026-10-12</time><span class="tag" data-astro-cid-tldeq5d5>#投影仪</span><span class="tag" data-astro-cid-tldeq5d5>#Android</span><span class="tag" data-astro-cid-tldeq5d5>#ADB</span></p></header><div class="prose" data-astro-cid-tldeq5d5><h2 id="写在前面">写在前面</h2>
+<p>入手用了一阵，觉得原厂的腾讯桌面不太合我的使用习惯，我更想要一个简洁、能自己排布的桌面。另外有几个预装应用我用不到，设置里没找到卸载入口，要用电脑连 ADB 才能处理。所以我干脆想换掉整个桌面，结果又卡在两道坑上：ADB 藏在工程菜单最里层，好不容易打开，关一次机又被系统恢复成关；第三方桌面装是装上了，可不给它开无障碍权限就不顶用——按 Home 还是跳回腾讯桌面，而那个「去设置」按钮在这台机上根本点不进去。前后摸索了好几天才把这几步理顺，干脆写下来给同款机器的朋友省点事。</p>
+<p>我用的机器是<strong>小明 Q5 Pro（XMM3101），极光 TV 版，Android 13，固件 2.0.7.1070</strong>。下面全是这台机器在 2026 年 10 月的实测，其他型号或固件可能菜单位置不一样。</p>
+<p>先说清楚风险：这些操作都不需要 root，也不会刷机，不想用了卸载就能恢复。但工程菜单里别的选项（复位、校准、老化测试）千万别乱点。</p>
+<p>顺序就是我当时踩坑的顺序：先进工程菜单把 ADB 打开，再用电脑连上去，然后装个小工具让 ADB 开机自己恢复，最后解决无障碍设置进不去的问题。文末列了几个我在这台机器上实际用过的软件；其中开机恢复和无障碍跳转这两个小工具是我自己做的。</p>
+<h2 id="为什么非得折腾-adb-和无障碍">为什么非得折腾 ADB 和无障碍</h2>
+<p>ADB 可以理解成电脑远程控制投影仪的一条通道。装软件其实用不着它，沙发管家、U 盘都行。但有些权限投影仪上没有开关可点，只能在电脑上输一行命令给过去。</p>
+<p>无障碍权限则是很多桌面和按键工具的命门。想让遥控器按 Home 回到新桌面，而不是跳回腾讯桌面，就得靠它监听按键。</p>
+<p>Q5 Pro 的麻烦在于，这两样东西的入口都藏得很深。普通设置里没有开发者选项，系统里也没有 Android 原生的设置应用，网上其他机型的组合键在这台上也不管用。</p>
+<h2 id="准备工作">准备工作</h2>
+<ul>
+<li>一台电脑，Windows 或 Mac 都行，和投影仪连同一个 Wi-Fi</li>
+<li>遥控器</li>
+<li>电脑上的 ADB 工具包：去 <a href="https://developer.android.com/tools/releases/platform-tools">Android 官方页面</a> 下载 SDK Platform-Tools，选自己系统的版本，解压就行，不用安装</li>
+<li>文中用到的几个 APK，下载地址我放在对应的步骤里</li>
+</ul>
+<h2 id="第一步从工程菜单打开-adb">第一步：从工程菜单打开 ADB</h2>
+<p>入口藏在「用户协议」那一项上。我是把系统设置的 APK 导出来翻代码才发现的：焦点停在这一项上时，连按 7 次方向上键就会弹出工程菜单。</p>
+<ol>
+<li>打开「系统设置」</li>
+<li>进右下角的「系统信息」</li>
+<li>打开「关于本机」，往下找到「法律信息」</li>
+<li>把焦点移到「用户协议」上，<strong>别点进去</strong>，直接按 7 次遥控器上键</li>
+<li>弹出工程菜单后，往下找「调试诊断」</li>
+<li>把「ADB ENABLE」调成「开」</li>
+</ol>
+<p><img alt="系统设置里选系统信息" loading="lazy" decoding="async" width="1280" height="720" src="/_astro/01-%E7%B3%BB%E7%BB%9F%E8%AE%BE%E7%BD%AE.PdRVSO4H_14yMYy.webp"></p>
+<p><img alt="关于本机里找到法律信息" loading="lazy" decoding="async" width="1280" height="720" src="/_astro/02-%E6%B3%95%E5%BE%8B%E4%BF%A1%E6%81%AF.BpvgiKwu_1Co75S.webp"></p>
+<p><img alt="焦点停在用户协议上按 7 次上键" loading="lazy" decoding="async" width="1280" height="720" src="/_astro/03-%E7%94%A8%E6%88%B7%E5%8D%8F%E8%AE%AE%E6%8C%897%E6%AC%A1.CVi5ZPKC_2rWIIM.webp"></p>
+<p><img alt="工厂菜单里找到调试诊断" loading="lazy" decoding="async" width="960" height="780" src="/_astro/04-%E5%B7%A5%E5%8E%82%E8%8F%9C%E5%8D%95%E8%B0%83%E8%AF%95%E8%AF%8A%E6%96%AD.B2RY51ak_1E4XdN.webp"></p>
+<p><img alt="把 ADB ENABLE 调成开" loading="lazy" decoding="async" width="960" height="600" src="/_astro/05-ADB-ENABLE.BnLCi4O0_1OFRaw.webp"></p>
+<p>两个坑：第 4 步焦点一离开「用户协议」，计数就清零了，按漏了重新按 7 次就行。另外工程菜单里的复位、初始化、校准都别碰，系统里那个叫 CvteAT 的应用也别打开。我试过一次，黑屏退不出来，音量还被拉到了最大。</p>
+<h2 id="第二步电脑连上投影仪">第二步：电脑连上投影仪</h2>
+<p><strong>先记下投影仪的 IP。</strong> 在投影仪的网络设置里点开当前连的 Wi-Fi，能看到一串类似 192.168.1.100 的地址。</p>
+<p><strong>在工具包文件夹里打开终端。</strong> 解压后会有一个 platform-tools 文件夹：</p>
+<ul>
+<li>Windows：在文件夹空白处右键，选「在终端中打开」。没有这一项的话，在文件夹地址栏输入 powershell 再回车。</li>
+<li>Mac：打开「终端」，输入 cd 加一个空格，把 platform-tools 文件夹拖进窗口，回车。</li>
+</ul>
+<p><strong>连接。</strong> 把下面的 IP 换成你自己的，后面的 :5555 留着：</p>
+<pre class="astro-code astro-code-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="sh"><code><span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">./adb</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> connect</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> 192.168.1.100:5555</span></span>
+<span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">./adb</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> devices</span></span></code></pre>
+<p>第二条命令会列出已连接的设备，地址后面写着 <code>device</code> 就是连上了。</p>
+<p>连上的话，终端里大概是这样：</p>
+<pre class="astro-code astro-code-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>connected to 192.168.1.100:5555</span></span>
+<span class="line"><span>List of devices attached</span></span>
+<span class="line"><span>192.168.1.100:5555    device</span></span></code></pre>
+<p>连不上的话先看报错：</p>
+<table>
+<thead>
+<tr>
+<th>看到的报错</th>
+<th>怎么办</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Connection refused</td>
+<td>投影仪的 ADB 没开，或者刚重启过被关掉了，回工程菜单再开一次</td>
+</tr>
+<tr>
+<td>超时 / 网络不可达</td>
+<td>IP 写错了，或者电脑和投影仪不在同一个网络</td>
+</tr>
+<tr>
+<td>unauthorized</td>
+<td>去投影仪屏幕上点允许</td>
+</tr>
+</tbody>
+</table>
+<p>如果电脑上还连了手机或模拟器，后面的命令可能会报「more than one device」。先断开其他设备，或者在 adb 后面加上 <code>-s 192.168.1.100:5555</code> 指定投影仪。</p>
+<h2 id="第三步让-adb-开机自己打开">第三步：让 ADB 开机自己打开</h2>
+<p>连上之后我高兴了没多久，关机再开，又连不上了。</p>
+<p>查了一下厂商的服务代码，它每次开机都会把 ADB 重新设成默认值，而这台机器的默认值就是关。也就是说，工程菜单里开一次只管这一次开机。</p>
+<p>每次都进工程菜单按 7 次上键太烦了，所以我写了个小软件「ADB 开机恢复」：开机完成后把 ADB 开关重新打开，再在大约 30、90、180 秒后各检查一遍。它没有常驻后台，只改这一个开关。</p>
+<p>下载：<a href="/downloads/q5/q5-adb-restore.apk">q5-adb-restore.apk</a>（源码在<a href="/downloads/q5/q5-tools-with-source.zip">工具合集包</a>里，校验值见 <a href="/downloads/q5/SHA256SUMS.txt">SHA256SUMS.txt</a>）</p>
+<p><strong>1. 安装</strong></p>
+<p>用你习惯的方法装就行，沙发管家的远程安装、U 盘都可以。电脑已经连着的话，也可以直接：</p>
+<pre class="astro-code astro-code-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="sh"><code><span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">./adb</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> install</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> q5-adb-restore.apk</span></span></code></pre>
+<p><strong>2. 给权限（关键一步）</strong></p>
+<p>装好还不能用。修改 ADB 开关需要一个叫 WRITE_SECURE_SETTINGS 的权限，投影仪上没有地方能点，只能用电脑给。整行复制进去，回车：</p>
+<pre class="astro-code astro-code-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="sh"><code><span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">./adb</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> shell</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> pm</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> grant</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> local.q5.adbrestore</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> android.permission.WRITE_SECURE_SETTINGS</span></span></code></pre>
+<p><img alt="给权限命令的终端效果" loading="lazy" decoding="async" width="1648" height="190" src="/_astro/12-%E7%BB%88%E7%AB%AF_%E7%BB%99%E6%9D%83%E9%99%90.Dh4yAZgv_f9EN3.webp"></p>
+<p>成功的话什么都不会显示，直接回到输入提示符。报 <code>Unknown package</code> 就是软件没装上。这一步每台机器只用做一次。</p>
+<p><strong>3. 启用</strong></p>
+<p>在应用列表里打开「ADB 开机恢复」，或者用命令：</p>
+<pre class="astro-code astro-code-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="sh"><code><span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">./adb</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> shell</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> am</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> start</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> -n</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> local.q5.adbrestore/.MainActivity</span></span></code></pre>
+<p><img alt="打开工具命令的终端效果" loading="lazy" decoding="async" width="1280" height="230" src="/_astro/13-%E7%BB%88%E7%AB%AF_%E6%89%93%E5%BC%80%E5%B7%A5%E5%85%B7.DOJ-XwPY_Z23obFU.webp"></p>
+<p>点「启用开机恢复并立即恢复 ADB」，上面变成「自动恢复：已启用」就好了。只装不点的话不会生效。</p>
+<p><img alt="开机恢复工具启用前后对比" loading="lazy" decoding="async" width="1940" height="530" src="/_astro/06-%E5%BC%80%E6%9C%BA%E6%81%A2%E5%A4%8D%E5%90%AF%E7%94%A8%E5%89%8D%E5%90%8E.BkwRRO6i_16bAjA.webp"></p>
+<p>我测了一次完整的关机再开：刚开机的那几秒连接会被拒绝，等一会儿就自己恢复了，没再进工程菜单。拔电源重启和长期使用还没专门测，大家用了可以反馈一下。</p>
+<p>不想用了就点「停用自动恢复」，或者直接卸载。停用不会马上关掉当前的 ADB，要关还得回工程菜单。</p>
+<h2 id="第四步打开无障碍设置">第四步：打开无障碍设置</h2>
+<p>这是我卡得最久的地方。</p>
+<p>装好 Projectivy Launcher 后，它会让你开无障碍权限，还贴心地给了个「显示无障碍服务设置」的按钮。可在 Q5 Pro 上一点，什么都没发生。系统设置里我也翻了一圈，没找到无障碍。</p>
+<p>原因是：普通安卓软件都用系统标准的方式跳转无障碍页面，而这台机器的无障碍页面是 CVTE 自己做的，标准入口没有指向它。页面其实还在，只是换了个门。</p>
+<p>下面三个办法，选一个就行。</p>
+<h3 id="办法一用命令打开-cvte-的无障碍页面">办法一：用命令打开 CVTE 的无障碍页面</h3>
+<p>什么都不用装，电脑连着就能用：</p>
+<pre class="astro-code astro-code-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="sh"><code><span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">./adb</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> shell</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> am</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> start</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> -a</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> com.cvte.intent.action.ACCESSIBILITY_SETTING</span></span></code></pre>
+<p>投影仪上会直接弹出原厂的无障碍窗口，在列表里找到要开的软件，打开就行。缺点是每次要开都得连电脑。</p>
+<p><img alt="CVTE 无障碍窗口：选软件，再把开关打开" loading="lazy" decoding="async" width="1940" height="265" src="/_astro/08-CVTE%E6%97%A0%E9%9A%9C%E7%A2%8D%E7%AA%97%E5%8F%A3.B5JGJ-bP_1yv7cT.webp"></p>
+<h3 id="办法二装一个-tv-settings">办法二：装一个 TV Settings</h3>
+<p>想用遥控器就能打开，可以装 <a href="https://github.com/ewlsh/TvSettingsOnFire/releases/tag/v0.1">TvSettingsOnFire</a>。它是把旧版 Android TV 设置移植过来的，原本给 Fire TV 用，在 Q5 Pro 上能打开无障碍、声音、显示、日期时间和开发者选项这几页。</p>
+<p>下载发布页里的 app-release.apk，装好后同样要用电脑给权限，否则里面的开关拨不动：</p>
+<pre class="astro-code astro-code-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="sh"><code><span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">./adb</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> shell</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> pm</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> grant</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> com.rockon999.android.tv.settings</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> android.permission.WRITE_SECURE_SETTINGS</span></span>
+<span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">./adb</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> shell</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> pm</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> grant</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> com.rockon999.android.tv.settings</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> android.permission.DUMP</span></span></code></pre>
+<p>之后在应用列表里打开它（电脑连着的话也可以用 <code>./adb shell am start -n com.rockon999.android.tv.settings/.MainSettings</code> 直接打开）。首页往下移到「偏好设置」，一直往右找到「辅助功能」，再进「服务」，选中要开的软件，把「状态」打开。</p>
+<p><img alt="TV Settings 从首页到打开无障碍服务的完整路径" loading="lazy" decoding="async" width="1280" height="2920" src="/_astro/09-TVSettings%E6%97%A0%E9%9A%9C%E7%A2%8D.BekKJtZw_UklgS.webp"></p>
+<p>它毕竟是旧版移植：「语言」会闪退，「应用管理」打不开。另外装了它以后，有些软件里的「系统设置」按钮可能会跳到它而不是原厂设置，原厂设置从桌面进不受影响。</p>
+<h3 id="办法三装我做的跳转小工具">办法三：装我做的跳转小工具</h3>
+<p>如果只是想让 Projectivy 那个按钮能点进去，我还做了个「无障碍设置入口」：装上以后，Projectivy 的「显示无障碍服务设置」就能跳到 CVTE 的那个窗口，桌面上也会多一个同名图标。它不申请权限，也没有后台，只负责跳转，装好就能用，不用连电脑给权限。</p>
+<p>下载：<a href="/downloads/q5/q5-accessibility-bridge.apk">q5-accessibility-bridge.apk</a></p>
+<p><img alt="Projectivy 里的「显示无障碍服务设置」入口" loading="lazy" decoding="async" width="1920" height="1080" src="/_astro/01-projectivy-entry.CrOlcLaJ_12do5u.webp"></p>
+<p>图里其他开关是我自己的设置，不用照着开。</p>
+<p>不管用哪个办法，只开你需要的那一个服务就好，列表里的其他服务不用全开。</p>
+<h2 id="弄好之后可以玩点什么">弄好之后可以玩点什么</h2>
+<p>ADB 和无障碍都通了，就可以开始换桌面了。下面是我在 Q5 Pro 上实际装过的：</p>
+<table>
+<thead>
+<tr>
+<th>软件</th>
+<th>用来干什么</th>
+<th>需要的权限</th>
+<th>我的使用情况</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://app.emotn.com/ui/">Emotn UI</a></td>
+<td>第三方桌面，界面干净</td>
+<td>无</td>
+<td>现在天天在用</td>
+</tr>
+<tr>
+<td><a href="https://github.com/BaronKiko/LauncherHijack/releases/tag/403">Launcher Hijack</a></td>
+<td>按 Home 时打开你选的桌面，而不是腾讯桌面</td>
+<td>无障碍</td>
+<td>和 Emotn UI 搭配，按 Home 能回到 Emotn</td>
+</tr>
+<tr>
+<td>Projectivy Launcher</td>
+<td>另一个第三方桌面，自定义项很多</td>
+<td>无障碍</td>
+<td>能用，无障碍跳转用上面办法三解决</td>
+</tr>
+<tr>
+<td>Button Mapper</td>
+<td>改遥控器按键功能</td>
+<td>无障碍</td>
+<td>试过，单用它接管 Home 会回到腾讯桌面，我后来停了</td>
+</tr>
+<tr>
+<td><a href="https://github.com/ewlsh/TvSettingsOnFire/releases/tag/v0.1">TvSettingsOnFire</a></td>
+<td>补一套 TV 风格设置，含开发者选项</td>
+<td>WRITE_SECURE_SETTINGS、DUMP</td>
+<td>前面办法二用的就是它</td>
+</tr>
+</tbody>
+</table>
+<p>我自己最后留下的是 <strong>Emotn UI + Launcher Hijack</strong>。两个会抢 Home 键的工具别同时开，会打架。另外原厂桌面并没有卸掉，只是按 Home 时被接管了，不想用了关掉无障碍服务就恢复。</p>
+<p>换完之后大概是这样。开机和按 Home 都是这个桌面，常用的应用可以自己加到首页：</p>
+<p><img alt="Emotn UI 桌面" loading="lazy" decoding="async" width="1920" height="1080" src="/_astro/10-EmotnUI%E6%A1%8C%E9%9D%A2.0J3py2o-_159Cxe.webp"></p>
+<p>应用列表里能看到前面装的几个工具：Projectivy、无障碍设置入口、Launcher Hijack、ADB 开机恢复。</p>
+<p><img alt="Emotn UI 应用列表" loading="lazy" decoding="async" width="1920" height="1080" src="/_astro/11-EmotnUI%E5%BA%94%E7%94%A8%E5%88%97%E8%A1%A8.Bxax5a6k_ZfP4LH.webp"></p>
+<p>具体怎么换桌面、怎么配 Launcher Hijack，推荐看 @杨葛格 的这篇<a href="https://zhuanlan.zhihu.com/p/19270170689">《将 FengOS 系统默认桌面更换为第三方桌面启动器》</a>，我之前也是参考它来配的。作者主页里还有别的投影仪相关文章，感兴趣可以去翻翻。</p>
+<p>要注意的是，那篇文章写的是 FengOS，里面也说了 Q5 Pro 这类极光 TV 机型不适用。所以前面打开 ADB 和无障碍这部分按我这篇做，后面配桌面的思路是通用的。</p>
+<p>想顺便清理一下用不到的预装应用，可以装个 ADB TV。它是个应用管理工具，能卸载或停用设置里删不掉的系统应用，前面应用列表的截图里也能看到我装了它。安装和用法可以直接照着杨葛格的视频<a href="https://www.bilibili.com/video/BV11zQbY8Exa/">《通过 ADB TV 卸载小明、峰米投影预装应用》</a>来，讲得很清楚。</p>
+<p>同样要注意：视频是按 FengOS 做的，里面给的可卸载清单不一定适用 Q5 Pro。卸之前先搞清楚这个应用是干啥的，不确定就先「停用」而不是卸载。桌面、设置、输入法和带 cvte 字样的系统组件别动，删错了可能开不了机。</p>
+<h2 id="常见问题">常见问题</h2>
+<p><strong>开机以后还是连不上？</strong> 先等一两分钟，工具要等系统开机完成才会动。还不行就看看 IP 是不是变了，路由器重启后经常会变。工具只管 ADB 开关，不管 IP。</p>
+<p><strong>按 Home 又回到腾讯桌面？</strong> 检查 Launcher Hijack 的无障碍服务还开着没有，再看有没有别的工具在抢 Home 键。</p>
+<p><strong>ADB 一直开着安全吗？</strong> 在自己家里的网络用问题不大。但我在日志里看到这台机器的网络 ADB 可能不强制确认连接，所以别把 5555 端口映射到公网，也别在公共 Wi-Fi 下开着。</p>
+<p><strong>想全部恢复原样？</strong> 装了哪个卸哪个，不用恢复出厂。按需挑一条执行：</p>
+<pre class="astro-code astro-code-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="sh"><code><span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">./adb</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> uninstall</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> local.q5.adbrestore</span></span>
+<span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">./adb</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> uninstall</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> local.q5.accessibilitybridge</span></span>
+<span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">./adb</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> uninstall</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> com.rockon999.android.tv.settings</span></span>
+<span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">./adb</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> uninstall</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> com.baronkiko.launcherhijack</span></span></code></pre>
+<p>卸载不会自动关掉之前开过的无障碍服务和 ADB，需要的话分别去无障碍页面和工程菜单里关。</p>
+<h2 id="最后">最后</h2>
+<p>这些都是我这一台机器上试出来的，固件不一样可能会有差别。如果你的菜单位置不同，或者开机恢复工具在你那里不管用，欢迎到 <a href="https://github.com/luoxu1314/luoxu1314.github.io/issues">GitHub Issues</a> 说一下你的固件版本，我看到会回。</p>
+<p>前面打开 ADB 到给权限的过程我录了一段视频，1 分 46 秒，视频里说的命令就是上面正文里那几条：</p>
+<p><video controls preload="metadata" poster="/media/q5-adb-tutorial-poster.jpg" src="/media/q5-adb-tutorial.mp4"></video></p>
+<p>换桌面、Home 键、补设置这些后续折腾，写在了<a href="/blog/xiaoming-q5-pro-followup/">下一篇</a>里。</p>
+<p>参考资料：</p>
+<ul>
+<li><a href="https://developer.android.com/tools/releases/platform-tools">Android 官方 SDK Platform-Tools 下载</a></li>
+<li><a href="https://developer.android.com/tools/adb">Android 官方 ADB 文档</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/19270170689">杨葛格：将 FengOS 系统默认桌面更换为第三方桌面启动器</a></li>
+<li><a href="https://www.bilibili.com/video/BV11zQbY8Exa/">杨葛格：通过 ADB TV 卸载小明、峰米投影预装应用（B 站视频）</a></li>
+</ul>
+</div></article></main><footer data-astro-cid-jo6i4kqk><span data-astro-cid-jo6i4kqk>&copy; 2026 落絮</span><span class="sep" data-astro-cid-jo6i4kqk>·</span><a href="https://github.com/luoxu1314" target="_blank" rel="noopener" data-astro-cid-jo6i4kqk>GitHub</a><span class="sep" data-astro-cid-jo6i4kqk>·</span><a href="/rss.xml" data-astro-cid-jo6i4kqk>RSS</a></footer></body></html>
