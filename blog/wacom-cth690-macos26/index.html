@@ -1,0 +1,119 @@
+<!DOCTYPE html><html lang="zh-CN" data-astro-cid-tldeq5d5><head><!-- Global Metadata --><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="sitemap" href="/sitemap-index.xml"><link rel="alternate" type="application/rss+xml" title="落絮的博客" href="https://luoxu1314.github.io/rss.xml"><meta name="generator" content="Astro v7.3.8"><!-- Canonical URL --><link rel="canonical" href="https://luoxu1314.github.io/blog/wacom-cth690-macos26/"><!-- Primary Meta Tags --><title>旧 Wacom 遇上新 macOS：CTH-690 卡在「等待同步」 | 落絮的博客</title><meta name="description" content="CTH-690 在 macOS 26 上一直显示等待同步。最后发现是旧驱动里的系统版本判断，改完还得重签名、给终端开 App 管理权限。"><!-- Open Graph --><meta property="og:type" content="website"><meta property="og:url" content="https://luoxu1314.github.io/blog/wacom-cth690-macos26/"><meta property="og:title" content="旧 Wacom 遇上新 macOS：CTH-690 卡在「等待同步」"><meta property="og:description" content="CTH-690 在 macOS 26 上一直显示等待同步。最后发现是旧驱动里的系统版本判断，改完还得重签名、给终端开 App 管理权限。"><style>:root{--content-width:720px;--bg:#fbfaf7;--text:#1f2328;--text-soft:#424a53;--muted:#6e7781;--border:#e3e0d8;--accent:#2f6f5e;--code-bg:#f2f0ea;--note-bg:#eef5f2;color-scheme:light}@media (prefers-color-scheme:dark){:root{--bg:#17191c;--text:#e6e6e3;--text-soft:#bfc3c8;--muted:#8b929a;--border:#2d3136;--accent:#7cc4ad;--code-bg:#202328;--note-bg:#1d2a26;color-scheme:dark}}*,:before,:after{box-sizing:border-box}html{-webkit-text-size-adjust:100%}body{background:var(--bg);color:var(--text);overflow-wrap:break-word;margin:0;font-family:-apple-system,BlinkMacSystemFont,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Noto Sans CJK SC,Segoe UI,sans-serif;font-size:17px;line-height:1.8}main{max-width:var(--content-width);margin:0 auto;padding:1rem}a{color:var(--accent);text-underline-offset:.2em}.prose h1,.prose h2,.prose h3{line-height:1.4}.prose h2{border-bottom:1px solid var(--border);margin:2.5rem 0 1rem;padding-bottom:.3rem;font-size:1.4rem}.prose h3{margin:2rem 0 .75rem;font-size:1.15rem}.prose p,.prose ul,.prose ol{margin:0 0 1.1rem}.prose li+li{margin-top:.25rem}.prose img,.prose video{border:1px solid var(--border);border-radius:8px;max-width:100%;height:auto;margin:1.25rem auto;display:block}.prose blockquote{border-left:3px solid var(--accent);background:var(--note-bg);color:var(--text-soft);border-radius:0 6px 6px 0;margin:1.25rem 0;padding:.75rem 1rem}.prose blockquote p:last-child{margin-bottom:0}.prose hr{border:none;border-top:1px solid var(--border);margin:2rem 0}code{font-family:SF Mono,Menlo,Consolas,Liberation Mono,monospace;font-size:.88em}:not(pre)>code{background:var(--code-bg);border-radius:4px;padding:.15em .35em}pre{border:1px solid var(--border);border-radius:8px;margin:0 0 1.25rem;padding:.9rem 1rem;line-height:1.6;overflow-x:auto}pre>code{font-size:.85rem}.astro-code,.astro-code span{background-color:var(--code-bg)!important}@media (prefers-color-scheme:dark){.astro-code,.astro-code span{color:var(--shiki-dark)!important;font-style:var(--shiki-dark-font-style)!important;font-weight:var(--shiki-dark-font-weight)!important}}.prose table{border-collapse:collapse;width:100%;margin:0 0 1.25rem;font-size:.92rem;line-height:1.6;display:block;overflow-x:auto}.prose th,.prose td{border:1px solid var(--border);text-align:left;vertical-align:top;padding:.5rem .75rem}.prose th{background:var(--code-bg);white-space:nowrap}.sr-only{clip:rect(1px, 1px, 1px, 1px);white-space:nowrap;width:1px;height:1px;overflow:hidden;position:absolute!important}@media (width<=600px){body{font-size:16px}}footer[data-astro-cid-jo6i4kqk]{max-width:var(--content-width);border-top:1px solid var(--border);color:var(--muted);margin:4rem auto 0;padding:2rem 1rem 3rem;font-size:.875rem}footer[data-astro-cid-jo6i4kqk] a[data-astro-cid-jo6i4kqk]{color:var(--muted)}.sep[data-astro-cid-jo6i4kqk]{margin:0 .4em}header[data-astro-cid-nen7h5rs]{border-bottom:1px solid var(--border)}nav[data-astro-cid-nen7h5rs]{max-width:var(--content-width);justify-content:space-between;align-items:center;gap:1rem;margin:0 auto;padding:1.1rem 1rem;display:flex}.site-title[data-astro-cid-nen7h5rs]{color:var(--text);font-size:1.1rem;font-weight:700;text-decoration:none}.links[data-astro-cid-nen7h5rs]{gap:1.25rem;display:flex}.links[data-astro-cid-nen7h5rs] a[data-astro-cid-nen7h5rs]{color:var(--muted);text-decoration:none}.links[data-astro-cid-nen7h5rs] a[data-astro-cid-nen7h5rs]:hover,.links[data-astro-cid-nen7h5rs] a[data-astro-cid-nen7h5rs].active{color:var(--text)}
+.post-header[data-astro-cid-tldeq5d5]{margin:1rem 0 2.5rem}.post-header[data-astro-cid-tldeq5d5] h1[data-astro-cid-tldeq5d5]{margin:0 0 .6rem;font-size:1.85rem;line-height:1.35}.meta[data-astro-cid-tldeq5d5]{color:var(--muted);margin:0;font-size:.9rem}.tag[data-astro-cid-tldeq5d5]{margin-left:.75em}
+</style></head><body data-astro-cid-tldeq5d5><header data-astro-cid-nen7h5rs><nav data-astro-cid-nen7h5rs><a class="site-title" href="/" data-astro-cid-nen7h5rs>落絮的博客</a><div class="links" data-astro-cid-nen7h5rs><a href="/" data-astro-cid-nen7h5rs>文章</a><a href="/about/" data-astro-cid-nen7h5rs>关于</a></div></nav></header><main data-astro-cid-tldeq5d5><article data-astro-cid-tldeq5d5><header class="post-header" data-astro-cid-tldeq5d5><h1 data-astro-cid-tldeq5d5>旧 Wacom 遇上新 macOS：CTH-690 卡在「等待同步」</h1><p class="meta" data-astro-cid-tldeq5d5><time datetime="2026-07-26T04:00:00.000Z">2026-07-26</time><span class="tag" data-astro-cid-tldeq5d5>#Wacom</span><span class="tag" data-astro-cid-tldeq5d5>#macOS</span><span class="tag" data-astro-cid-tldeq5d5>#Apple Silicon</span></p></header><div class="prose" data-astro-cid-tldeq5d5><p>手上有块老的 Wacom CTH-690，插到 Mac 上，Wacom Center 一直显示「等待同步」，就停在那儿不动。驱动装了，后台进程也在。</p>
+<p>我第一反应是驱动没卸干净。这板子比较老，我特意装的是还支持它的旧版驱动，之前好像也装过新版，怀疑是两套混在一起了。</p>
+<p>结果不是。问题出在旧驱动里写死的一段系统版本判断，在 macOS 26 上直接不往下初始化了。把这段改掉，再重签名、补权限，板子就认出来了，压感也有。</p>
+<p>这次是让 Codex 帮着一起查的。环境是 <strong>CTH-690、Apple Silicon Mac、macOS 26.5.2、Wacom 驱动 6.4.10-3</strong>。要改驱动二进制和签名，Wacom 官方不支持这么干，换个版本组合不一定适用。</p>
+<h2 id="先看看卡在哪">先看看卡在哪</h2>
+<p>「等待同步」这四个字基本没信息量。我先看了几样东西：USB 能认到 CTH-690；装的驱动只有 6.4.10-3 一套；Wacom 的几个后台服务都在跑。</p>
+<p>所以板子没坏，但进程在跑也不代表驱动真的好了。</p>
+<p>然后去翻官方发行说明，发现是个两头够不着的情况：</p>
+<table>
+<thead>
+<tr>
+<th>驱动版本</th>
+<th>官方写的 macOS 范围</th>
+<th>CTH-690</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>6.4.10-3</td>
+<td>macOS 12–15</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>6.4.11-1</td>
+<td>macOS 13–15、26</td>
+<td>移除支持</td>
+</tr>
+</tbody>
+</table>
+<p>6.4.11-1 的说明里直接把 CTH-690 列进了停止支持的设备，让你去用 6.4.10-3。旧驱动认板子但不认系统，新驱动认系统但不认板子。<a href="https://cdn.wacom.com/u/productsupport/drivers/mac/professional/releasenotes/Mac_6.4.10-3.html">6.4.10-3 发行说明</a>、<a href="https://cdn.wacom.com/u/productsupport/drivers/mac/professional/releasenotes/Mac_6.4.11-1.html">6.4.11-1 发行说明</a></p>
+<p>为了一块数位板降级系统不现实，只能看旧驱动到底卡在哪。</p>
+<p>想自己查的话，下面几条命令都是只读的，分别看系统版本、CPU 架构、USB 设备和当前用户的服务：</p>
+<pre class="astro-code astro-code-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">sw_vers</span></span>
+<span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">uname</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> -m</span></span>
+<span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">system_profiler</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> SPUSBDataType</span></span>
+<span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">launchctl</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> print</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> "gui/$(</span><span style="color:#6F42C1;--shiki-dark:#B392F0">id</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> -u</span><span style="color:#032F62;--shiki-dark:#9ECBFF">)"</span></span></code></pre>
+<p>后两条输出很长，搜 <code>Wacom</code> 或 <code>Tablet</code> 就行。USB 里有没有设备，和驱动服务加载到哪一步，是两回事，分开看。</p>
+<h2 id="不是混装是版本判断">不是混装，是版本判断</h2>
+<p>我还专门怀疑过 <code>Wacom_IOManager</code>。它名字和别的组件不太一样，位置也不在一起，看着很像卸载时漏下来的。</p>
+<p>后来把装好的文件和官方安装包逐个比 SHA-256，下面五个可执行文件全都对得上，没有哪个是别的版本混进来的：</p>
+<ul>
+<li>Wacom Center</li>
+<li>TabletDriver</li>
+<li>WacomTabletDriver</li>
+<li>WacomTouchDriver</li>
+<li>Wacom_IOManager</li>
+</ul>
+<p>继续搜的时候翻到一个开源项目 <a href="https://github.com/MohamadAshrafSalama/wacom-macos27-driver-fix">wacom-macos27-driver-fix</a>。它解决的是另一个版本组合（macOS 27、驱动 6.4.13-4、CTL-4100），跟我的情况对不上，补丁不能直接拿来用。但它给了个关键思路：Wacom 驱动里有硬编码的系统版本检查，可能还没碰到设备就先拒绝了。</p>
+<p>顺着这个思路去看 6.4.10-3 的二进制，五个组件的 arm64 部分都有这么一段：</p>
+<pre class="astro-code astro-code-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="asm"><code><span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">mov</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> w0, #</span><span style="color:#005CC5;--shiki-dark:#79B8FF">1</span></span>
+<span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">mov</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> w1, #</span><span style="color:#005CC5;--shiki-dark:#79B8FF">16</span></span>
+<span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">mov</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> w2, #</span><span style="color:#005CC5;--shiki-dark:#79B8FF">10</span></span>
+<span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">mov</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> w3, #</span><span style="color:#005CC5;--shiki-dark:#79B8FF">0</span></span></code></pre>
+<p>这是在给版本检查准备参数，阈值是 <code>16.10</code>。注意这里是版本号的两段，不是小数 16.1。当时分析下来，这就是挡住初始化的那个上限。补丁把 <code>16</code> 改成 <code>26</code>，阈值变成 <code>26.10</code>，我的 26.5.2 就不会被拦下来了。</p>
+<p>光看这四条指令其实说明不了全部逻辑，还得结合后面的调用和跳转一起看。写这篇的时候我又翻了一下留着的文件：官方包里五个文件各有一处 <code>16.10</code> 这段，改过的副本各有一处 <code>26.10</code>，和当时的补丁对得上。</p>
+<p>我的是 Apple Silicon，所以只改了 arm64。x86-64 那边指令不一样，没动，Intel Mac 我也没法测。</p>
+<h2 id="改完还得重签名">改完还得重签名</h2>
+<p>二进制一改，原来的代码签名就对不上了，必须重新签。</p>
+<p>当时的脚本先把原始文件和 entitlements 存一份，再用 <code>/usr/bin/codesign</code> 做 ad-hoc 签名。entitlements 就是程序声明自己要哪些权限和例外。重签的时候要在原来那份基础上加东西，不能只写新加的那一项把原来的整个覆盖掉。</p>
+<p>加的是这一项：</p>
+<pre class="astro-code astro-code-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>com.apple.security.cs.disable-library-validation = true</span></span></code></pre>
+<p>原因是 ad-hoc 签名没有 Wacom 的 Team ID，可驱动还要加载 Wacom 自己签名的框架。开了 Hardened Runtime 以后，默认只能加载同一个 Team ID 或者 Apple 签名的库，所以得把库校验关掉。<a href="https://developer.apple.com/documentation/BundleResources/Entitlements/com.apple.security.cs.disable-library-validation?changes=_7_1">Apple：Disable Library Validation</a></p>
+<p>这是有代价的，改过的这几个组件加载库的时候不再校验签名。而且说到底它还是那个旧驱动，跳过了版本检查，不代表它就真的兼容新系统了。</p>
+<p>原文件备份在：</p>
+<pre class="astro-code astro-code-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>/Library/Application Support/Tablet/macos26-cth690-patch-backup-&lt;时间戳&gt;/</span></span></code></pre>
+<p>脚本里还写死了五个原始文件的 SHA-256，对不上就直接退出，免得把给 6.4.10-3 准备的补丁打到别的版本上。</p>
+<h2 id="加了-sudo-还是-operation-not-permitted">加了 sudo 还是 Operation not permitted</h2>
+<p>真正跑补丁的时候又卡了一下：</p>
+<pre class="astro-code astro-code-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>PermissionError: [Errno 1] Operation not permitted</span></span></code></pre>
+<p>是在往 Wacom 应用包里写文件的时候报的。已经是 sudo 了还不行，重跑几遍也一样。</p>
+<p>最后发现是终端的问题。我用的是 Ghostty，它在「系统设置 → 隐私与安全性 → App 管理」里没打开。之前给别的应用开过各种授权，偏偏漏了真正在跑命令的这个终端。</p>
+<p>把 Ghostty 的 App 管理打开，彻底退出再重开，补丁就能跑下去了。App 管理管的是一个应用能不能改别的应用，跟 sudo 那套权限是两码事，root 也绕不过去。<a href="https://support.apple.com/guide/mac-help/change-privacy-security-settings-on-mac-mchl211c911f/mac">Apple：隐私与安全性设置</a></p>
+<p>这个坑我觉得最值得记。在 macOS 上看到 <code>Operation not permitted</code>，别急着加 sudo，先看是哪个操作被拒、是哪个应用发起的。</p>
+<p>驱动自己要的辅助功能、输入监控是另外一组权限，重签以后最好再去看一眼还有没有效。给终端临时开的 App 管理，用完记得关掉。</p>
+<h2 id="怎么算修好了">怎么算修好了</h2>
+<p>补丁最后按 DataStoreMgr、IOManager、tablet driver 的顺序重新加载服务，然后检查签名和驱动通信。</p>
+<p>当时检查的结果：五个组件签名都通过，arm64 的版本判断改好了，CTH-690、笔和触控都能识别，之前一直没有的 <code>WacomTabletDriverMessageServer</code> 也起来了。</p>
+<p>单独检查某个组件的签名可以这样，同样是只读的：</p>
+<pre class="astro-code astro-code-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">/usr/bin/codesign</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> --verify</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> --strict</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> --verbose=2</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span class="line"><span style="color:#032F62;--shiki-dark:#9ECBFF">  "/Applications/Wacom Tablet.localized/.Tablet/WacomTabletDriver.app"</span></span></code></pre>
+<p>签名过了不代表能用，最后还是得拿笔试。在其他应用里画了一下，压感是有的。</p>
+<p>然后又出了个小插曲：在「预览」里给 PDF 写字，线条粗细一点不变。我差点又回头去查驱动，后来想想同一支笔别的应用里压感正常，那就不是驱动的事，是预览自己对笔输入的处理。后面去找 PDF 批注软件，那是另一个话题了。</p>
+<h2 id="如果你也卡在等待同步">如果你也卡在「等待同步」</h2>
+<p>我会按这个顺序查：先对一下板子型号、系统版本和驱动支持范围，再看 USB 有没有认到、装的是哪个版本、服务起没起来。这些都指向版本判断，才值得去动二进制。</p>
+<table>
+<thead>
+<tr>
+<th>现象</th>
+<th>先查什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>USB 列表里没有设备</td>
+<td>线、接口、设备本身</td>
+</tr>
+<tr>
+<td>设备能看到，驱动界面卡住</td>
+<td>型号和驱动对不对得上，服务有没有初始化完</td>
+</tr>
+<tr>
+<td>改完驱动起不来</td>
+<td>签名、库校验、权限</td>
+</tr>
+<tr>
+<td>写应用文件报 <code>Operation not permitted</code></td>
+<td>被拒的路径，以及终端有没有 App 管理权限</td>
+</tr>
+<tr>
+<td>只有某个应用没压感</td>
+<td>那个应用本身支不支持数位笔，工具设置</td>
+</tr>
+</tbody>
+</table>
+<p>我只验证了修完当时能用，没长期跑，也没测之后的系统更新会不会又坏掉。</p>
+<p>反正 CTH-690 又能用了。回头看，重装驱动帮不上什么忙。有用的是一层层分开确认：系统认没认到设备，进程有没有在跑，驱动能不能通信，应用拿不拿得到压感。</p>
+</div></article></main><footer data-astro-cid-jo6i4kqk><span data-astro-cid-jo6i4kqk>&copy; 2026 落絮</span><span class="sep" data-astro-cid-jo6i4kqk>·</span><a href="https://github.com/luoxu1314" target="_blank" rel="noopener" data-astro-cid-jo6i4kqk>GitHub</a><span class="sep" data-astro-cid-jo6i4kqk>·</span><a href="/rss.xml" data-astro-cid-jo6i4kqk>RSS</a></footer></body></html>
