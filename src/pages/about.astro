@@ -1,0 +1,23 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { GITHUB_URL } from '../consts';
+---
+
+<!doctype html>
+<html lang="zh-CN">
+	<head>
+		<BaseHead title="关于" description="关于这个博客" />
+	</head>
+	<body>
+		<Header />
+		<main class="prose">
+			<h1>关于</h1>
+			<p>我是落絮。2022 年春天在伊春开了这个博客，写了一篇就搁下了，2026 年又捡了回来。</p>
+			<p>这里主要放我折腾各种设备和软件的记录，踩过的坑写下来，给后来的人省点时间。</p>
+			<p>找我可以去 <a href={GITHUB_URL}>GitHub</a>。</p>
+		</main>
+		<Footer />
+	</body>
+</html>

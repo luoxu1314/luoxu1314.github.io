@@ -1,0 +1,180 @@
+:root {
+	--content-width: 720px;
+	--bg: #fbfaf7;
+	--text: #1f2328;
+	--text-soft: #424a53;
+	--muted: #6e7781;
+	--border: #e3e0d8;
+	--accent: #2f6f5e;
+	--code-bg: #f2f0ea;
+	--note-bg: #eef5f2;
+	color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--bg: #17191c;
+		--text: #e6e6e3;
+		--text-soft: #bfc3c8;
+		--muted: #8b929a;
+		--border: #2d3136;
+		--accent: #7cc4ad;
+		--code-bg: #202328;
+		--note-bg: #1d2a26;
+		color-scheme: dark;
+	}
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	-webkit-text-size-adjust: 100%;
+}
+
+body {
+	margin: 0;
+	background: var(--bg);
+	color: var(--text);
+	font-family:
+		-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+		'Noto Sans CJK SC', 'Segoe UI', sans-serif;
+	font-size: 17px;
+	line-height: 1.8;
+	overflow-wrap: break-word;
+}
+
+main {
+	max-width: var(--content-width);
+	margin: 0 auto;
+	padding: 1rem;
+}
+
+a {
+	color: var(--accent);
+	text-underline-offset: 0.2em;
+}
+
+/* 文章正文 */
+.prose h1,
+.prose h2,
+.prose h3 {
+	line-height: 1.4;
+}
+.prose h2 {
+	margin: 2.5rem 0 1rem;
+	padding-bottom: 0.3rem;
+	border-bottom: 1px solid var(--border);
+	font-size: 1.4rem;
+}
+.prose h3 {
+	margin: 2rem 0 0.75rem;
+	font-size: 1.15rem;
+}
+.prose p,
+.prose ul,
+.prose ol {
+	margin: 0 0 1.1rem;
+}
+.prose li + li {
+	margin-top: 0.25rem;
+}
+.prose img,
+.prose video {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	margin: 1.25rem auto;
+	border-radius: 8px;
+	border: 1px solid var(--border);
+}
+.prose blockquote {
+	margin: 1.25rem 0;
+	padding: 0.75rem 1rem;
+	border-left: 3px solid var(--accent);
+	background: var(--note-bg);
+	border-radius: 0 6px 6px 0;
+	color: var(--text-soft);
+}
+.prose blockquote p:last-child {
+	margin-bottom: 0;
+}
+.prose hr {
+	border: none;
+	border-top: 1px solid var(--border);
+	margin: 2rem 0;
+}
+
+/* 代码 */
+code {
+	font-family: 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;
+	font-size: 0.88em;
+}
+:not(pre) > code {
+	padding: 0.15em 0.35em;
+	background: var(--code-bg);
+	border-radius: 4px;
+}
+pre {
+	margin: 0 0 1.25rem;
+	padding: 0.9rem 1rem;
+	overflow-x: auto;
+	border-radius: 8px;
+	border: 1px solid var(--border);
+	line-height: 1.6;
+}
+pre > code {
+	font-size: 0.85rem;
+}
+.astro-code,
+.astro-code span {
+	background-color: var(--code-bg) !important;
+}
+@media (prefers-color-scheme: dark) {
+	.astro-code,
+	.astro-code span {
+		color: var(--shiki-dark) !important;
+		font-style: var(--shiki-dark-font-style) !important;
+		font-weight: var(--shiki-dark-font-weight) !important;
+	}
+}
+
+/* 表格：窄屏横向滚动 */
+.prose table {
+	display: block;
+	width: 100%;
+	overflow-x: auto;
+	margin: 0 0 1.25rem;
+	border-collapse: collapse;
+	font-size: 0.92rem;
+	line-height: 1.6;
+}
+.prose th,
+.prose td {
+	padding: 0.5rem 0.75rem;
+	border: 1px solid var(--border);
+	text-align: left;
+	vertical-align: top;
+}
+.prose th {
+	background: var(--code-bg);
+	white-space: nowrap;
+}
+
+.sr-only {
+	position: absolute !important;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip: rect(1px, 1px, 1px, 1px);
+	white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+	body {
+		font-size: 16px;
+	}
+}

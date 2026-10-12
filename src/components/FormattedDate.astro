@@ -1,0 +1,11 @@
+---
+interface Props {
+	date: Date;
+}
+
+const { date } = Astro.props;
+// 按北京时间显示，避免构建机在 UTC 时区把日期算早一天
+const text = date.toLocaleDateString('sv-SE', { timeZone: 'Asia/Shanghai' });
+---
+
+<time datetime={date.toISOString()}>{text}</time>

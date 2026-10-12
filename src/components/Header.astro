@@ -1,0 +1,52 @@
+---
+import { SITE_TITLE } from '../consts';
+
+const path = Astro.url.pathname;
+const links = [
+	{ href: '/', label: '文章' },
+	{ href: '/about/', label: '关于' },
+];
+---
+
+<header>
+	<nav>
+		<a class="site-title" href="/">{SITE_TITLE}</a>
+		<div class="links">
+			{links.map(({ href, label }) => (
+				<a href={href} class:list={{ active: path === href }}>{label}</a>
+			))}
+		</div>
+	</nav>
+</header>
+<style>
+	header {
+		border-bottom: 1px solid var(--border);
+	}
+	nav {
+		max-width: var(--content-width);
+		margin: 0 auto;
+		padding: 1.1rem 1rem;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 1rem;
+	}
+	.site-title {
+		font-weight: 700;
+		font-size: 1.1rem;
+		color: var(--text);
+		text-decoration: none;
+	}
+	.links {
+		display: flex;
+		gap: 1.25rem;
+	}
+	.links a {
+		color: var(--muted);
+		text-decoration: none;
+	}
+	.links a:hover,
+	.links a.active {
+		color: var(--text);
+	}
+</style>
